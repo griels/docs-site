@@ -12,13 +12,13 @@ content:
 #  branches: [master, 1.2.x, 1.1.x, 1.0.x]
 #    start_path: docs/user
   - url: https://github.com/couchbase/couchbase-elasticsearch-connector.git
-    branches: [release/4.0, release/cypress]
+    branches: [master, release/4.1, release/4.0, release/cypress]
     start_path: docs
   - url: https://github.com/couchbase/kafka-connect-couchbase.git
     branches: [master, release/3.3]
     start_path: docs
   - url: https://github.com/couchbase/couchbase-spark-connector.git
-    branches: [master, release/2.2, release/2.1]
+    branches: [master, release/2.3, release/2.2, release/2.1]
     start_path: docs
 #  - url: https://github.com/couchbase/docs-connectors-talend.git
 #    branches: master
@@ -27,13 +27,12 @@ content:
     branches: [master, alice, vulcan, spock, 5.0.1]
     start_path: docs
 #  - url: https://github.com/couchbase/backup.git
-#    branches: [master, alice, vulcan, spock, 5.0.x]
+#    branches: [mad-hatter, alice, vulcan, spock, 5.0.x]
 #    start_path: docs
   # NOTE server-docs is currently after other server repos so nav key wins
   - url: https://github.com/couchbase/docs-server.git
     branches: [mad-hatter, release/6.0, release/5.5]
   - url: https://github.com/couchbase/docs-sdk-common.git
-    branches: [release/6.0]
   - url: https://github.com/couchbase/docs-sdk-c.git
   - url: https://github.com/couchbase/docs-sdk-dotnet.git
   - url: https://github.com/couchbase/docs-sdk-go.git
@@ -44,9 +43,13 @@ content:
   - url: /Users/ellis_breen/root/workspaces/couchbase/docs-sdk-python
   - url: https://github.com/couchbase/docs-sdk-scala.git
   - url: https://github.com/couchbaselabs/docs-couchbase-lite.git
-    branches: [release/2.6, release/2.5, release/2.1, release/2.0, release/1.4, release/1.3]
+    branches: [release/2.7, release/2.6, release/2.5, release/2.1, release/2.0, release/1.4, release/1.3]
   - url: https://github.com/couchbaselabs/docs-sync-gateway.git
-    branches: [release/2.6, release/2.5, release/2.1, release/2.0, release/1.5, release/1.4, release/1.3]
+    branches: [release/2.7, release/2.6, release/2.5, release/2.1, release/2.0, release/1.5, release/1.4, release/1.3]
+  - url: https://github.com/couchbase-partners/test-drive-couchbase
+    branches: [docs-site-pub]
+#  - url: git@github.com:couchbase/docs-ngdm.git
+#    branches: [master]
   # Tutorial repositories
   - url: https://github.com/couchbaselabs/tutorials.git
     branches: master
@@ -84,6 +87,8 @@ asciidoc:
     tabs: tabs
     toc: ~
     xrefstyle: short
+    enterprise: https://www.couchbase.com/products/editions[ENTERPRISE EDITION]
+    community: https://www.couchbase.com/products/editions[COMMUNITY EDITION]
   extensions:
   - ./lib/json-config-ui-block-macro.js
   - ./lib/inline-man-macro.js
@@ -92,7 +97,7 @@ asciidoc:
   - ./lib/tabs-block.js
 ui:
   bundle:
-    url: https://github.com/couchbase/docs-ui/releases/download/v219/ui-bundle.zip
+    url: https://github.com/couchbase/docs-ui/releases/download/v231/ui-bundle.zip
   supplemental_files:
   - path: robots.txt
     contents: |
