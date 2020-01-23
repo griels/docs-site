@@ -41,7 +41,7 @@ content:
   - url: https://github.com/couchbase/docs-sdk-php.git
 #  - url: https://github.com/couchbase/docs-sdk-python.git
   - url: https://github.com/griels/docs-sdk-python.git
-    brances: [3.0.0-migration]
+    branches: [3.0.0-migration-mk2]
   - url: https://github.com/couchbase/docs-sdk-scala.git
   - url: https://github.com/couchbaselabs/docs-couchbase-lite.git
     branches: [release/2.7, release/2.6, release/2.5, release/2.1, release/2.0, release/1.4, release/1.3]
