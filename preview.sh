@@ -16,6 +16,8 @@ if [ "$1" == "docker" ]; then
   spjmurray/couchbase-antora-preview:1.1.0 \
   --repo url=/,branches=master:1.0.x,start_path=docs/user
 fi
+mkdir -p ${output_dir}
+open "file://${output_dir}"
 echo "building in ${output_dir}"
 antora generate ${PLAYBOOK_NAME}.yml --pull --clean --to-dir ${output_dir} &> ${PLAYBOOK_NAME}.log
 echo "built in ${output_dir}"
