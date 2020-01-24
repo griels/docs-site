@@ -1,5 +1,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-export output_dir="${DIR}/public"
+export today=`date +%Y%m%d_%H%M%S`
+export output_dir="${DIR}/../sites/${today}"
 echo "deleting output_dir ${output_dir}"
 rm -rf ${output_dir}
 export cache="${DIR}/.cache"
@@ -15,6 +16,6 @@ if [ "$1" == "docker" ]; then
   spjmurray/couchbase-antora-preview:1.1.0 \
   --repo url=/,branches=master:1.0.x,start_path=docs/user
 fi
-echo "building"
-antora generate ${PLAYBOOK_NAME}.yml --cache-dir=${cache} &> ${PLAYBOOK_NAME}.log
-
+echo "building in ${output_dir}"
+antora generate ${PLAYBOOK_NAME}.yml --pull --clean --to-dir ${output_dir} &> ${PLAYBOOK_NAME}.log
+echo "built in ${output_dir}"
